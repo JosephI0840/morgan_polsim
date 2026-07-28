@@ -1,13 +1,13 @@
-title: Siegfried Aufhäuser
+title: Johnny Lothian
 is-pinned-card: true
-tags: advisor, reformist
-card-image: img/portraits/AufhauserSiegfried.jpg
-view-if: aufhauser_advisor = 1
+tags: advisor, labor
+card-image: img/portraits/JLo.jpeg
+view-if: muller_advisor = 1
 new-page: true 
 
-= Siegfried Aufhäuser
+= Johnny Lothian
 
-Aufhäuser is a leader of the AfA-Bund, the federation of socialist white-collar trade unions.
+Lothian is a leader of the AfA-Bund, the federation of socialist white-collar trade unions.
 
 - @white_collar
 - @union_unity
