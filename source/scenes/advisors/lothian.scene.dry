@@ -36,7 +36,7 @@ We have aligned ourselves with the far-right parties, the Communists are outrage
 title: Rally with the Right
 subtitle: Lothian could knit closer ties with the Right to stave off the Communist support.
 choose-if: advisor_action_timer <= 0 and NSDAP_relation >= 50 and DNVP_relation >= 50
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if NSDAP_relation <= 50 or if DNVP_relation <= 50 : We need higher relations with the far-right parties. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if NSDAP_relation <= 50 or DNVP_relation <= 50 : We need higher relations with the far-right parties. ?]
 on-arrival: advisor_action_timer = 6; 
 go-to: crisis_program.support_left 
 
