@@ -608,7 +608,7 @@ title: Johnny Lothian
 subtitle: Johnny Lothian is the head teacher of Morgan Academy {!<br><br>!}[? if difficulty < 0 : Actions - Move Towards the Right, Right-wing Relations, Rally with the Right ?]
 is-card: true
 card-image: img/portraits/JLo.jpeg
-tags: labor_advisor
+tags: rightist_advisor
 view-if: lothian_advisor = 0 and n_advisors < 3
 on-arrival: lothian_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
