@@ -314,7 +314,7 @@ frequency: 1
 @right
 view-if: n_advisors < 3
 
-- #right_advisor
+- #rightist_advisor
 
 @centrist
 view-if: n_advisors < 3
