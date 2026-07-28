@@ -1,0 +1,11 @@
+title: Rightist leaders resign
+new-page: true 
+subtitle: Rightist disagreements with our policies have grown too severe.
+tags: event
+view-if: right_dissent >= 60
+on-arrival: right_strength *= 0.3; rural_spd -= 5; n_advisors -= 1 if lothian_advisor = 1; lothian_advisor = 0; rb_strength -= 100; right_split = 1
+max-visits: 1
+
+= Rightist leaders resign
+
+Our policy choices have greatly offended the Rightist faction, although they do not contribute much to our socialist party...
