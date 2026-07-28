@@ -2,7 +2,7 @@ title: Johnny Lothian
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/JLo.jpeg
-view-if: muller_advisor = 1
+view-if: lothian_advisor = 1
 new-page: true 
 
 = Johnny Lothian
