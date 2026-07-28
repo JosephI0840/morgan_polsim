@@ -149,14 +149,6 @@ go-to: rm_main
 
 Woytinsky has been removed as an advisor. The Labor faction disapproves.
 
-@remove_lothian
-title: Remove Lothian
-view-if: lothian_advisor = 1
-tags: remove_advisor
-on-arrival: lothian_advisor = 0; labor_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Lothian has been removed as an advisor. The Labor faction disapproves.
 
 # left
 
@@ -237,6 +229,17 @@ go-to: rm_main
 
 Schumacher has been removed as an advisor. The Neorevisionist faction disapproves.
 
+## right
+
+@remove_lothian
+title: Remove Lothian
+view-if: lothian_advisor = 1
+tags: remove_advisor
+on-arrival: lothian_advisor = 0; right_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Lothian has been removed as an advisor. The Right faction disapproves.
+
 
 ## nonfactional
 
@@ -298,7 +301,7 @@ title: Add other advisors.
 tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
-
+- @right: Add Rightists
 - @centrist: Add Centrists
 - @left: Add Leftists
 - @reformist: Add Reformists
@@ -307,6 +310,11 @@ frequency: 1
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
+
+@right
+view-if: n_advisors < 3
+
+- #right_advisor
 
 @centrist
 view-if: n_advisors < 3
@@ -554,17 +562,6 @@ go-to: advisor_menu
 
 Wladimir Woytinsky is now an advisor.
 
-@add_lothian
-title: Johnny Lothian
-subtitle: Johnny Lothian is the head teacher of Morgan Academy {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/JLo.jpeg
-tags: labor_advisor
-view-if: lothian_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: lothian_advisor = 1; n_advisors += 1; labor_strength += 5
-go-to: advisor_menu
-
-Johnny Lothian is now an advisor.
 
 # neorevisionist leaders
 
@@ -603,6 +600,20 @@ go-to: advisor_menu
 tags: neorev_advisor
 
 Julius Leber is now an advisor.
+
+# rightist leaders
+
+@add_lothian
+title: Johnny Lothian
+subtitle: Johnny Lothian is the head teacher of Morgan Academy {!<br><br>!}[? if difficulty < 0 : Actions - Move Towards the Right, Right-wing Relations, Rally with the Right ?]
+is-card: true
+card-image: img/portraits/JLo.jpeg
+tags: labor_advisor
+view-if: lothian_advisor = 0 and n_advisors < 3
+on-arrival: lothian_advisor = 1; n_advisors += 1; right_strength += 5
+go-to: advisor_menu
+
+Johnny Lothian is now an advisor.
 
 # Nonfactional advisors
 
