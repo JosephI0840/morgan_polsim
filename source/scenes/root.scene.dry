@@ -564,6 +564,7 @@ Q.leipart_advisor = 0; // Theodor Leipart
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 Q.wissell_advisor = 0; // Rudolf Wissell
+Q.lothian_advisor = 0; // Johnny Lothian
 
 // Revisionist advisors
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
