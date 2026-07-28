@@ -564,7 +564,7 @@ view-if: lothian_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: lothian_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+Johnny Lothian is now an advisor.
 
 # neorevisionist leaders
 
