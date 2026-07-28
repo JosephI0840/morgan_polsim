@@ -7,45 +7,36 @@ new-page: true
 
 = Johnny Lothian
 
-Lothian is a leader of the AfA-Bund, the federation of socialist white-collar trade unions.
+Lothian is the head teacher of Morgan Academy, he is also an advocate for the party's move towards the right.
 
-- @white_collar
-- @union_unity
-- @crisis
-- @moderate_economic_plan
+- @right_wing
+- @nsdap
+- @rally_with_the_right
 - @root: Return to main
 
-@white_collar
-title: Organizing white-collar workers
-subtitle: Improve our standing among the new middle class.
+@right_wing
+title: Move towards the Right
+subtitle: Bring in reformist views into the party.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
-on-arrival: advisor_action_timer = 6; new_middle_spd += 6*(1-dissent);
+on-arrival: advisor_action_timer = 6; left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_strength += 10; reformist_dissent -= 5; neorevisionist_strength += 5; neorevisionist_dissent -= 10;
 
-We have increased our organizing among white-collar workers.
+We have brought in new, some might say unorthodox, ideas into the party. The left, centrist and labor factions express their displeasure.
 
-@union_unity
-title: Union-party coordination
-subtitle: Reduce dissent among the unions.
+@nsdap
+title: Right-wing Relations
+subtitle: Increase ties between the SPD and the far-right parties.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; labor_dissent -= 10;
+on-arrival: advisor_action_timer = 6; left_dissent += 15; center_dissent += 10; labor_dissent += 15; DNVP_relation += 10; NSDAP_relation += 10
 
-We have reduced tensions with the Labor faction.
+We have aligned ourselves with the far-right parties, the Communists are outraged whilst the bourgeoisie were unamoured.
 
-@crisis
-title: Addressing the economic crisis
-subtitle: Aufhäuser can help support a left-wing economic program.
-choose-if: advisor_action_timer <= 0 and nationalization_adopted == 0 and black_thursday_seen == 1 and nationalization_support <= 3
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?]
+@rally_with_the_right
+title: Rally with the Right
+subtitle: Lothian could knit closer ties with the Right to stave off the Communist support.
+choose-if: advisor_action_timer <= 0 and NSDAP_relation >= 50 and DNVP_relation >= 50
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if NSDAP_relation <= 50 or if DNVP_relation <= 50 : We need higher relations with the far-right parties. ?]
 on-arrival: advisor_action_timer = 6; 
 go-to: crisis_program.support_left 
-
-@moderate_economic_plan
-title: Support the reformist economic plan
-subtitle: Aufhäuser can also support a moderate economic plan.
-choose-if: advisor_action_timer = 0 and moderate_plan_adopted = 0 and black_thursday_seen = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if moderate_economic_plan = 0 : We have already adopted the reformist economic plan. ?] [? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?]
-on-arrival: advisor_action_timer = 6
-go-to: crisis_program.support_moderate
 
