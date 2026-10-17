@@ -33,13 +33,13 @@ go-to: root
 tags: remove_advisor
 
 @remove_bronicki
-title: Remove Bronicki
+title: Remove Dawid
 view-if: bronicki_advisor = 1
 on-arrival: bronicki_advisor = 0; center_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Bronicki has been removed as an advisor. The Centrist faction disapproves.
+Dawid has been removed as an advisor. The Centrist faction disapproves.
 
 
 @remove_hilferding
@@ -111,23 +111,23 @@ Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
 # labor
 
-@remove_leipart
-title: Remove Leipart
-view-if: leipart_advisor = 1
+@remove_tang
+title: Remove Joseph
+view-if: tang_advisor = 1
 tags: remove_advisor
-on-arrival: leipart_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: tang_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Leipart has been removed as an advisor. The Labor faction disapproves.
+Joseph has been removed as an advisor. The Labor faction disapproves.
 
-@remove_aufhauser
-title: Remove Aufhäuser
-view-if: aufhauser_advisor = 1
+@remove_azam
+title: Remove Rayyan
+view-if: azam_advisor = 1
 tags: remove_advisor
-on-arrival: aufhauser_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: azam_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Aufhäuser has been removed as an advisor. The Labor faction disapproves.
+Rayyan has been removed as an advisor. The Labor faction disapproves.
 
 @remove_wissell
 title: Remove Wissell
