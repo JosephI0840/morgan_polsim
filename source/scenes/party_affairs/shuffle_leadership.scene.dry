@@ -32,6 +32,15 @@ title: Stop changing advisors.
 go-to: root
 tags: remove_advisor
 
+@remove_bronicki
+title: Remove Bronicki
+view-if: bronicki_advisor = 1
+on-arrival: bronicki_advisor = 0; center_dissent += 5; n_advisors -= 1
+tags: remove_advisor
+go-to: rm_main
+
+Bronicki has been removed as an advisor. The Centrist faction disapproves.
+
 
 @remove_hilferding
 title: Remove Hilferding
@@ -328,6 +337,18 @@ view-if: neorevisionism > 0 and n_advisors < 3
 view-if: n_advisors < 3
 
 - #nonfactional_advisor
+
+@add_bronicki
+title: Dawid Bronicki
+subtitle: Dawid Bronicki is the leader of the party {!<br><br>!}Actions - Negotiating with the Coalition
+is-card: true
+card-image: img/portraits/Dawid.webp
+tags: center_advisor
+view-if: bronicki_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: bronicki_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Dawid Bronicki is now an advisor.
 
 @add_hilferding
 title: Rudolf Hilferding
