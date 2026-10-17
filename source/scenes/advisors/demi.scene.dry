@@ -1,0 +1,22 @@
+title: Demilade Ogunjobi
+is-pinned-card: true
+tags: advisor, labor
+card-image: img/portraits/Demilade.png
+view-if: demi_advisor = 1
+new-page: true 
+
+= Demilade Ogunjobi
+
+Demi is the treasurer of the R. Gang (as he has took Accounting in Nat 5 I think), he also manages the Gang's outreach.
+
+- @campaigning
+- @root: Return to main
+
+@campaigning
+title: Campaigning
+subtitle: As the 
+choose-if: advisor_action_timer <= 0 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; workers_spd += 4*(1-dissent); workers_spd += 3*(1-dissent) if wtb_adopted == 1; labor_strength += 2;
+
+We have campaigned amongst the workers.
