@@ -555,8 +555,8 @@ Q.hindenburg_dismissal_timer = 0;
 
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
-Q.hilferding_advisor = 1; // Rudolf Hilferding
-Q.bronicki_advisor = 1; // Dawid Bronicki
+Q.hilferding_advisor = 0; // Rudolf Hilferding
+Q.bronicki_advisor = 0; // Dawid Bronicki
 // left advisors
 Q.sender_advisor = 0; // Toni Sender
 Q.levi_advisor = 0; // Paul Levi
@@ -575,10 +575,10 @@ Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 
 // Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
+Q.tang_advisor = 1; // Joseph Tang
+Q.azam_advisor = 0; // Rayyan Azam
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
-Q.wissell_advisor = 0; // Rudolf Wissell
+Q.demi_advisor = 1; // Demilade Ogunjobi
 
 // Revisionist advisors
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
