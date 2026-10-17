@@ -129,14 +129,14 @@ go-to: rm_main
 
 Rayyan has been removed as an advisor. The Labor faction disapproves.
 
-@remove_wissell
-title: Remove Wissell
-view-if: wissell_advisor = 1
+@remove_demi
+title: Remove Demi
+view-if: demi_advisor = 1
 tags: remove_advisor
-on-arrival: wissell_advisor = 0; labor_dissent += 3; n_advisors -= 1
+on-arrival: demi_advisor = 0; labor_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Wissell has been removed as an advisor. The Labor faction disapproves.
+Demi has been removed as an advisor. The Labor faction disapproves.
 
 
 @remove_woytinsky
