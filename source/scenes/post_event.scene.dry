@@ -101,9 +101,18 @@ if (Q.dissent < 0) {
 // 1. update dates
 if (Q.month_actions >= 1) {
     Q.time += 1;
+    Q.week += 1;
     Q.month_actions = 0;
-    Q.month += 1;
+    if (Q.week >= 6 and (Q.month = 3 or Q.month = 6 or Q.month = 9 or Q.month = 12)) {
+        Q.week = 1;
+        Q.month += 1;
+    }
+    if (Q.week >= 5 and (!Q.month = 3 and !Q.month = 6 and !Q.month = 9 and !Q.month = 12)){
+        Q.week = 1;
+        Q.month += 1;
+    }
     if (Q.month >= 13) {
+        Q.week = 1;
         Q.month = 1;
         Q.year += 1;
         if (Q.annual_income > 0) {
